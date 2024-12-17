@@ -1,0 +1,44 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Prashant Odhavani",
+    "classifications": [
+        "Web",
+        "MVC"
+    ],
+    "identity": "MicroserviceVsixTemplateDemo",
+    "name": "Microservice Vsix Template Demo",
+    "description": "This is demo Microservice Vsix Template",
+    "shortName": "MicroserviceVsixTemplate",
+    "sourceName": "MicroserviceVsixTemplateDemo",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "preferNameDirectory": true,
+    "symbols": {
+        "EnableSwaggerSupport": {
+            "type": "parameter",
+            "description": "Enable swagger support for project",
+            "datatype": "bool",
+            "defaultValue": "true"
+        },
+        "IncludeDevAppSettings": {
+            "type": "parameter",
+            "description": "Adds appsettings.Development.json",
+            "datatype": "bool",
+            "defaultValue": "true"
+        }
+    },
+    "sources": [
+        {
+            "modifiers": [
+                {
+                    "condition": "(!IncludeDevAppSettings)",
+                    "exclude": [
+                        "MicroserviceVsixTemplate/appsettings.Development.json"
+                    ]
+                }
+            ]
+        }
+    ]
+}

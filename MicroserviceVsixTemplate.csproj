@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Template metadata -->
+    <PackageType>Template</PackageType>
+    <PackageVersion>1.0.0</PackageVersion>
+    <PackageId>MicroserviceVsixTemplate</PackageId>
+    <Title>Prashant's Microservice Vsix Demo Template</Title>
+    <Authors>Prashant Odhavani</Authors>
+    <Description>Bunch of cool templates for y'all to use</Description>
+    <PackageTags>dotnet-new;templates;microservices</PackageTags>
+
+    <!-- Target Framework -->
+    <TargetFramework>net9.0</TargetFramework> <!-- Update to your desired version -->
+    
+    <!-- Package-related properties -->
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+
+    <!-- Nullable and implicit usings -->
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+  <!-- Include all files in templates folder -->
+  <None Include="templates\**\*" Pack="true" PackagePath="content/" />
+  
+  <!-- Remove unnecessary compile items -->
+  <Compile Remove="**\*.cs" />
+</ItemGroup>
+
+
+</Project>

@@ -1,0 +1,6 @@
+@MicroserviceVsixTemplateDemo_HostAddress = http://localhost:5157
+
+GET {{MicroserviceVsixTemplateDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
